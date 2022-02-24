@@ -5,6 +5,8 @@ import ActivityDashboard from '../../features/activities/dashboard/ActivityDashb
 import LoadingComponent from './LoadingComponents';
 import { useStore } from './stores/store';
 import { observer } from 'mobx-react-lite';
+import HomePage from '../../features/home/HomePage';
+import { Route } from 'react-router-dom';
 
 
 function App() {
@@ -23,7 +25,8 @@ function App() {
     <>
       <NavBar />
       <Container style={{marginTop: '7em'}}>
-        <ActivityDashboard  />
+        <Route path='/' component={HomePage} />
+        <Route path='/activities' component={HomePage} /> 
       </Container>
 
     </>
